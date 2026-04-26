@@ -1,0 +1,127 @@
+.details-container {
+  width: 100%;
+  max-width: 100vw;
+  margin: auto;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  overflow-x: hidden; /* No horizontal scroll */
+}
+
+/* 4. MAIN LAYOUT (Recipe + Side Ad) */
+.main-content-area {
+  display: grid;
+  grid-template-columns: 1fr 350px; /* Right column fixed for 350px Ad */
+  gap: 20px;
+  align-items: start;
+  margin-top: 100px;
+}
+
+/* 5. LEFT SIDE (Recipe Content) */
+.recipe-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* TOP ROW: IMAGE + INGREDIENTS */
+.top-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* Tablet pe stack hone ke liye */
+}
+
+.image-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.ingredients-box {
+  flex: 1;
+  min-width: 250px;
+  background: #111;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.ingredients-box h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #ff0000;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+.ingredients-box ul {
+  list-style: none;
+}
+
+.ingredients-box li {
+  padding: 8px 0;
+  border-bottom: 1px solid #222;
+  font-size: 14px;
+}
+
+/* TITLE ROW */
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #111;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.back-btn {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.title-text h2 { margin: 0; font-size: 1.5rem; }
+.title-text p { margin: 0; color: #888; }
+
+/* INSTRUCTIONS */
+.instructions-box {
+  background: #111;
+  padding: 20px;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.instructions-box h3 {
+  color: #ff0000;
+  margin-bottom: 10px;
+}
+
+.instructions-box p {
+  line-height: 1.8;
+  color: #ccc;
+  text-align: justify;
+}
+
+
+/* 7. RESPONSIVE LOGIC */
+@media (max-width: 1100px) {
+  .main-content-area {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-row { flex-direction: column; }
+  .image-box img { height: 250px; }
+}

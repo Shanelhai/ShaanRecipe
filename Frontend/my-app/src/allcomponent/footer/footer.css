@@ -1,0 +1,140 @@
+/* footer.css */
+
+.footer {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 80px 5% 30px;
+  border-top: 2px solid #1a1a1a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* Four column layout */
+  grid-template-columns: 1.5fr 0.8fr 1fr 1fr;
+  gap: 30px;
+}
+
+/* Titles */
+.footer-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* TastyNest Red Accent */
+.footer-section h3 span {
+  color: #ff0000;
+}
+
+/* Description Text */
+.footer-section p {
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 0.9rem;
+}
+
+.footer-contact-simple {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #ff0000;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+/* Lists Styling */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 12px;
+  color: #888;
+  font-size: 0.9rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Link Hover Effect */
+.footer-section ul li a {
+  color: #888;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li:hover, 
+.footer-section ul li a:hover {
+  color: #ff0000;
+  transform: translateX(5px);
+}
+
+/* Cuisine Grid specifically for the 4th column */
+.cuisine-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns inside the fourth section */
+  gap: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.footer-bottom hr {
+  border: 0;
+  border-top: 1px solid #1a1a1a;
+  margin-bottom: 30px;
+}
+
+.footer-bottom p {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.footer-bottom span {
+  color: #ff0000;
+  font-weight: bold;
+}
+
+.credit {
+  font-style: italic;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 50px 5% 20px;
+  }
+  .footer-container {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+    text-align: center;
+    gap: 40px;
+  }
+  .footer-section ul li:hover {
+    transform: none; /* Mobile pe drift na ho */
+  }
+  .cuisine-grid {
+    justify-content: center;
+  }
+}

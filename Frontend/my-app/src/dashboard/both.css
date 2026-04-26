@@ -1,0 +1,81 @@
+.auth-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  background: #0a0a0a;
+  border: 1px solid #222;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.shadow {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+}
+
+.auth-title {
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 80%;
+  padding: 14px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: red;
+  box-shadow: 0 0 8px rgba(255, 0, 0, 0.2);
+}
+
+.mb-3 {
+  margin-bottom: 15px;
+}
+
+.btn-dark {
+  width: 100%;
+  padding: 15px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.btn-dark:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+}
+
+/* Mobile responsive grid */
+@media (max-width: 600px) {
+  .register-grid {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 20px;
+  }
+}
