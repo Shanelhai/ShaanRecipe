@@ -8,17 +8,14 @@ import adminRoutes from "./routes/adminroutes.js";
 import contactRoutes from "./routes/contactroutes.js";
 import recipeRouter from "./routes/reciperoutes.js";
 
-
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-
-
 app.use(cors({
   origin: ["http://localhost:5173"],
-  credentials: true                
+  credentials: true
 }));
 
 // routes
@@ -28,14 +25,18 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/contact", contactRoutes);
 app.use("/api/recipes", recipeRouter);
 
-
-
+// ✅ DB connect (separate)
 mongoose.connect(process.env.DB_URL)
-    .then(()=>{
-    app.listen(process.env.PORT, ()=>{
-    console.log("Server is running on port : ",process.env.PORT);
+  .then(() => console.log("MongoDB connected ✅"))
+  .catch(err => console.log("DB Error:", err));
+
+// ✅ ALWAYS start server
+const PORT = process.env.PORT || 5000;
+
+app.get("/", (req, res) => {
+  res.send("Backend is live 🚀");
 });
-    console.log("Connected to MongoDB");
-}).catch((error)=>{
-    console.log("Error connecting to MongoDB", error);
-})
+
+app.listen(PORT, () => {
+  console.log("Server running on port:", PORT);
+});
