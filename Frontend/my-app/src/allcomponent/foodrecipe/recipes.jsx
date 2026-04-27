@@ -24,7 +24,7 @@ const Recipes = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:5007/api/recipes?category=${category}`
+        `https://shaanrecipe-1.onrender.com/api/recipes?category=${category}`
       );
       setRecipes(res.data);
     } catch (err) {
@@ -53,7 +53,7 @@ const Recipes = () => {
       setLoading(true);
       try {
         const res = await axios.get(
-          `http://localhost:5007/api/recipes/search?query=${search}`
+          `https://shaanrecipe-1.onrender.com/api/recipes/search?query=${search}`
         );
         setRecipes(res.data);
         setSearchParams({});

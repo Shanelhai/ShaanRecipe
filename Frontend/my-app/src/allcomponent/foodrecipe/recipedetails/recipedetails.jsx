@@ -13,7 +13,7 @@ const RecipeDetails = () => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const res = await axios.get(`http://localhost:5007/api/recipes/details/${id}`);
+        const res = await axios.get(`https://shaanrecipe-1.onrender.com/api/recipes/details/${id}`);
         setRecipe(res.data);
       } catch (err) {
         console.error("Error fetching details:", err);

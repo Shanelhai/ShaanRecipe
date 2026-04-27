@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchHome = async () => {
       try {
-        const res = await axios.get("http://localhost:5007/api/recipes/home");
+        const res = await axios.get("https://shaanrecipe-1.onrender.com/api/recipes/home");
         setData(res.data);
       } catch (err) {
         console.error(err);

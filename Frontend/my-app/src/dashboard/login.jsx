@@ -33,7 +33,7 @@ const Login = ({ formKey }) => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5007/api/auth/login",
+        "https://shaanrecipe-1.onrender.com/api/auth/login",
         formData
       );
 
