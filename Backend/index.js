@@ -14,7 +14,10 @@ const app = express();
 app.use(express.json());
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://shaan-recipe.vercel.app/recipes"],
+  origin: [
+    "http://localhost:5173",
+    "https://shaan-recipe.vercel.app"
+  ],
   credentials: true
 }));
 
